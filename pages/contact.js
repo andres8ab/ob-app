@@ -1,17 +1,18 @@
 import { useSelector } from "react-redux";
 
 import Hero from "@/components/Hero";
+import Contact from "@/components/Contact";
 import Cart from "@/components/Cart/Cart";
 
-const HomePage = () => {
+const ContactPage = () => {
   const showCart = useSelector((state) => state.ui.cartIsVisible);
-
   return (
     <>
-      <Hero heading="OB GENUINE PARTS" message="la pagina" />
+      <Hero heading="contacto" message="todos los contactos" />
       {showCart && <Cart />}
+      <Contact />
     </>
   );
 };
 
-export default HomePage;
+export default ContactPage;
